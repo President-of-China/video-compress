@@ -1,1 +1,13 @@
-const nextConfig = {};
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  async rewrites() {
+    return [
+      {
+        source: '/',
+        destination: '/video',
+      },
+    ];
+  },
+};
+
+export default nextConfig;
