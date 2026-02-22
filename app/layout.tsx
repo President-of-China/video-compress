@@ -1,6 +1,7 @@
 import { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "~/components/Navbar";   // ← 加上這行 import
 import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -59,6 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Navbar />          {/* ← 加上這行，只顯示 logo */}
         {children}
         <Toaster />
       </body>
